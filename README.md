@@ -12,38 +12,25 @@ Secure Authentication: Passwords are hashed using bcrypt before storing them in 
 JWT Token-based Authentication: JWT tokens are used for user authentication and authorization.
 Installation
 Clone the repository:
+git clone https://github.com/SkVaDaR/test1
 
-bash
-Copy code
-git clone https://github.com/yourusername/user-management-app.git
-Navigate to the project directory:
-
-bash
-Copy code
-cd user-management-app
 Install dependencies:
-
-bash
-Copy code
 npm install
+
 Set up environment variables:
-
 Create a .env file in the root directory and provide the following variables:
-
-makefile
-Copy code
+PORT=your_port_number
 MONGODB_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
-Start the server:
 
-bash
-Copy code
-npm start
+Start the server:
+npx ts-node app.ts
 API Endpoints
 POST /register: Register a new user (accessible to administrators).
 POST /login: Authenticate a user and get a JWT token.
 GET /users: Get the list of users (accessible based on user roles).
 PUT /users/:userId/change-boss: Change a user's boss (accessible to bosses).
+
 Technologies Used
 Node.js
 Express
